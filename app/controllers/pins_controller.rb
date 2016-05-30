@@ -29,7 +29,7 @@ class PinsController < ApplicationController
     @pin = current_user.pins.build(pin_params)
 
     respond_to do |format|
-      if @pin.save
+      if
         format.html { redirect_to @pin, notice: 'Pin utworzony pomyślnie.' }
         format.json { render :show, status: :created, location: @pin }
       else
